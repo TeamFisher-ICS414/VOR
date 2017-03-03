@@ -6,22 +6,24 @@ total effort to-date
 
 ***********************Questions***********************
 
-Are we creating the componet of the VOR instrument that handles the calculations?
+Are we creating the component of the VOR instrument that handles the calculations?
 Since we are not implementing an interface, are we to print the output to the console?  (i.e., "GOOD, To, 45 degrees Left")
-We are recieving input from the OBS.  Are we to implement a fake OBS, for testing, in which the user inputs their locaiton and heading via console?
-We are also recieving input from a fake radio for testing purposes.  Does/can the radio take user input to determine its location in relation to the aircraft?
+We are receiving input from the OBS.  Are we to implement a fake OBS, for testing, in which the user inputs their location and heading via console?
+We are also receiving input from a fake radio for testing purposes.  Does/can the radio take user input to determine its location in relation to the aircraft?
 Is the defection of the needle output to indicate the number of dots off center for <10 degrees and a far left/right output?  Or, should the output just include a number and direction, left or right?
 
 ***********************Code Location***********************
 
 We will be using git as our version control and all code, documentation, and assignment related files will be hosted on github.
-An organization called "TeamFisher-ICS414" was created with a repo titled "VOR".  A link to our teams organizatioin is on the next line below.
+An organization called "TeamFisher-ICS414" was created with a repo titled "VOR".  A link to our teams organization is on the next line below.
 https://github.com/TeamFisher-ICS414
 
 ***********************Initial Thoughts and Design***********************
 
-The following design is based off of our interpritation until our questions are answered and further instruction is given.
-Methods:
+The following design is based off of our interpretation until our questions are answered and further instruction is given.
+
+Pseudo Code and Mock Design including classes and methods below:
+
 class OBS{
     float x_coord, y_coord, z_coord, log_dest, lat_dest;
     double speed;
@@ -112,5 +114,5 @@ class VOR{
 
 Using the OBS and radio classes, we can have the user set the location and destination of the craft as well as the location of the radio.  
 Knowing those components will allow us to calculate, by hand, what the deflection and VOR output should be.
-Program correctness is evaluated on the program's console outputs cloness to hand calculated values.  
+Program correctness is evaluated on the program's console outputs closeness to hand calculated values.  
 Multiple locations and orientations will be assessed to catch corner cases such as if the plane is in the "cone of confusion" or too far away.
