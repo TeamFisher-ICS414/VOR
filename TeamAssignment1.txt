@@ -27,6 +27,8 @@ The following design is based off of our interpretation until our questions are 
 
 Pseudo Code and Mock Design including classes and methods below:
 
+//DESIGN A - for complex navigation
+
 class OBS{
     float x_coord, y_coord, z_coord, log_dest, lat_dest;
     double speed;
@@ -118,6 +120,8 @@ Upon further evaluation of the assignment, a different intepretation of the requ
  methods and parameters.  Feedback from our questions in the first part of the assignment will help us finalize our design
  the following is another draft of our methods and parameters
 *****************************************************
+
+//DESIGN B - for navigation to/from VOR station
 
 /* main method
  * Parameters: int OBS, int signal
