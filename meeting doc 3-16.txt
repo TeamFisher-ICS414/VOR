@@ -1,0 +1,73 @@
+//DESIGN B - for navigation to/from VOR station
+
+/* main method
+ * Parameters: int OBS, int signal
+ * Returns: String adjustment (possible outputs "BAD" "AHEAD" "TL1" "TL2" "TL3" "TL4" "TLM" "TR1" "TR2" "TR3" "TR4" "TRM" "FL1" "FL2" "FL3" "FL4" "FLM" "FR1" "FR2" "FR3" "FR4" "FRM")
+ * In return string, T/F is To/From, L/R is left/right, and 1-4 or M is 1/2 number for degrees or Maximum correction
+ *
+ * First calls signalTest, returns "BAD" if signalTest is 1, proceeds otherwise
+ * Calls signalParse, stores result
+ * Calls heading, stores result
+ * Returns value from heading
+*/
+
+/* signalTest
+ * Parameters: int signal
+ * Returns: 0 or 1 (0 for any signal with a "GOOD" indicator, 1 for a "BAD" indicator)
+*/
+
+/* signalParse
+ * Parameters: int signal
+ * Returns: int radial (0 to 359)
+*/
+
+/* heading
+ * Parameters: int radial, int OBS
+ * Returns: String adjustment
+ *
+ * Will return "BAD" if OBS - radial equals 89, 90, 91, 269, 270, 271, -89, -90, -91, -269, -270, or -271 
+ * Will return "FWD" if OBS == radial
+ * Will return a simplified version of the comparison otherwise, with To/From indicated (e.g. "TL1", "FRM")
+*/
+
+/* radio
+ * Parameters: int radial, boolean status (0 for "Good", 1 for "BAD")
+ * Returns: int signal
+ *
+ * This is essentially a driver method used to produce a fake radio signal
+*/
+
+
+Of the above:
+Assignment A: Main/signalTest/signalParse work closely in conjunction
+
+Assignment B: Heading is the most complex function, probably more complex than the three above combined
+
+Assignment C: For radio, it works most closely with main, but could be built by a different person without too much trouble. We could divide up so one person builds A, other person builds B, and the person who spent the least time also builds C (I suspect one person will build A/C, and the other person build B, since the hard math is in B).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Timing for completion - are you feeling anxious about having it all merged before Sunday? I will probably be finishing up another assignment tonight/tomorrow, and working primarily on Sunday. I could shoot for Saturday if needed.
+
+Would it make the most sense to have our main method be a driver that takes 3 parameters, calls signal to condense to two parameters, and then calls old-main ("receiver"?)?
+
++ 1.5 time for Bill
++ 1.5 for Lambert
+
+_________________________MEETING NOTES____________________
+
+Classes:
+BS - does calculation
+VOR - produces signal
+main method - driver with UI
+Calls setter for each object - set signal, set radial
+
+class called "signal" with two pieces of info bundled
+- 
+
+Our driver asks for 4 pieces of information:
+	Desired-radial, actual-radial, Fwd-away, and good-bad
+Our OBS object receives 2 parameters: pilot-input and signal
+turns parameters into 4 pieces of information:
+	Desired-radial, actual-radial, Fwd-away, and good-bad
+Returns 1 piece of information
