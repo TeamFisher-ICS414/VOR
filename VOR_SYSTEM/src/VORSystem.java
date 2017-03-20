@@ -2,7 +2,7 @@
 public class VORSystem {
 
 	private int currentRadial, destinationRadial, difference, deflection;
-	private boolean toward, goodSignal;
+	private boolean toward;
 	String direction, turn;
 	
 	public VORSystem(OBS plane, int intercept) {
@@ -39,7 +39,7 @@ public class VORSystem {
 			turn = "RIGHT";
 		}
 		
-		if(Math.abs(deflection)==90){
+		if(Math.abs(deflection)<=91 && Math.abs(deflection)>=89){
 			signal = false;
 		}else{
 			signal = true;
