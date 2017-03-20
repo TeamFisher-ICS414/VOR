@@ -1,7 +1,6 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,5 +13,4 @@ public class Main {
 		VORSystem vor = new VORSystem(pilot, station.getRadio());
 		vor.output();
 	}
-
 }
