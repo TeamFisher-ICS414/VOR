@@ -14,8 +14,7 @@ public class VORSystem {
 		boolean signal;
 		if(currentRadial<0){
 			signal =  false;
-		}
-		else{
+		}else{
 			signal = true;
 		}
 		return signal;

@@ -1,0 +1,17 @@
+Actual LOC to-date: 
+    Objects/Classes     LOC
+        Main            10
+        radio           18
+        OBS             34
+        VORSystem       43
+
+Estimated LOC at completion:    
+    Objects/Classes     LOC
+        Main            10
+        radio           18
+        OBS             34
+        VORSystem       43
+        
+total effort to-date
+    William Mullen: ??? hours
+    Lambert Leong:  7 hours
