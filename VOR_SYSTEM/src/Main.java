@@ -18,7 +18,8 @@ public class Main {
 		pilot.setHeading();
 		destinationRadial = pilot.getHeading();
 		toward = pilot.getDirection();
-	
+		VORSystem vor = new VORSystem(pilot, station.getRadio());
+		vor.output();
 		
 	}
 

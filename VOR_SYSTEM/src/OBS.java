@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class OBS {
 
 	private int destinationRadial, to;
-	boolean validInput, toward;
+	private boolean validInput, toward;
 	
 	Scanner input = new Scanner( System.in );
 	

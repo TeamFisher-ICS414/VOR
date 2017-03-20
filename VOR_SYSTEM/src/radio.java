@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class radio {
 	
 	private int currentRadial;
-	boolean validInput;
+	private boolean validInput;
 	
 	Scanner input = new Scanner( System.in );
 
