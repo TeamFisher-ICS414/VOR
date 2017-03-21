@@ -13,5 +13,5 @@ Estimated LOC at completion:
         VORSystem       43
         
 total effort to-date
-    William Mullen: ??? hours
+    William Mullen: 7.25 hours
     Lambert Leong:  7 hours
