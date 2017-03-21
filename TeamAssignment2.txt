@@ -17,4 +17,6 @@ total effort to-date
     
     Our source code can be found in the root directory of https://github.com/TeamFisher-ICS414/VOR/
     specific files:
-    
+    VOR/Main.java
+    VOR/radio.java
+    VOR/VORSystem.java
