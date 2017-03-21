@@ -12,6 +12,9 @@ Estimated LOC at completion:
         OBS             34
         VORSystem       43
         
-total effort to-date
-    William Mullen: ??? hours
+Total effort to-date
+    William Mullen: 7 hours
     Lambert Leong:  7 hours
+
+Source code can be found at
+https://github.com/TeamFisher-ICS414/VOR/tree/master/VOR_SYSTEM/src
