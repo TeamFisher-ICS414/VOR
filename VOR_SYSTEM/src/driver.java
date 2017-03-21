@@ -7,3 +7,4 @@ public class driver {
 	
 	int n = input.nextInt();
 }
+

@@ -5,9 +5,28 @@ public class radio {
 	
 	private int currentRadial;
 	private boolean validInput;
+	private int signalValue;
 	
+	public radio(int radial, boolean goodBad) {
+		validInput = goodBad;
+		currentRadial = radial;
+	}
+	
+	public int produceSignal() {
+		if (validInput == false) {
+			signalValue = ((-1)*currentRadial);
+			if (currentRadial == 0) {
+				signalValue -= 360; 
+			}
+		} else {
+			signalValue = currentRadial;
+		}
+		
+		return signalValue;
+	}
+	/* Bill edit: I'm removing this function and creating a constructor. Driver/GUI will handle I/O
 	Scanner input = new Scanner( System.in );
-
+*/
 	//default constructor
 	
 	/*
@@ -15,6 +34,8 @@ public class radio {
 	 * Accepts user input from (0-359), as specified in assignment
 	 * Negative values are accepted and handled by the VORSystem function signalValidate()
 	 * */
+	
+	/* Bill edit: I'm removing this function and creating a constructor. Driver/GUI will handle I/O
 	public void setRadio(){
 		while(!validInput){
 			try{
@@ -31,12 +52,17 @@ public class radio {
 			}
 		}
 	}
+	*/
 	
 	/*
 	 * Used to get the fake radio interceptRadial
 	 * to be passed to VOR Object
 	 * */
+	
+	/* Bill edit: I'm swapping out for a parameter to be passed
 	public int getRadio(){
 		return currentRadial;
 	}
+	*/
 }
+
