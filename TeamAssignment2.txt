@@ -13,3 +13,8 @@ Estimated LOC at completion:
 total effort to-date
     William Mullen: 7.5 hours
     Lambert Leong:  7.75 hours
+    
+    
+    Our source code can be found in the root directory of https://github.com/TeamFisher-ICS414/VOR/
+    specific files:
+    
