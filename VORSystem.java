@@ -65,8 +65,6 @@ if	the	intercepted	radial	is	within	one	degree	of	90	degrees	from	the	intended	r
 		
 		if(Math.abs(deflection)<=91 && Math.abs(deflection)>=89){
 			goodSignal = false;
-		}else{
-			goodSignal = true;
 		}
 		
 		if(Math.abs(deflection)>=91) {
@@ -102,16 +100,14 @@ if	the	intercepted	radial	is	within	one	degree	of	90	degrees	from	the	intended	r
 	}
 	*/
 	
-	public String output(){
-		String retStr="";
+	public void output(){
+		deflectionCalc();
 		if(goodSignal == true){
-			deflectionCalc();
 			System.out.println("Signals is: GOOD"+"\nNeedle "+turn+" "+dots
 					+"\n"+direction+" indicator lit");
 		}else{
 			System.out.println("Signal is: BAD");
 		}
-		return retStr;
 	}
 }
 
