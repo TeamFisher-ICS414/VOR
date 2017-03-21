@@ -1,17 +1,15 @@
 Actual LOC to-date: 
-    Objects/Classes     LOC
-        Main            10
-        radio           18
-        OBS             34
-        VORSystem       43
+    Objects/Classes     LOC //(counting comments)
+        Main            60
+        radio           67 
+        VORSystem       112
 
 Estimated LOC at completion:    
     Objects/Classes     LOC
-        Main            10
-        radio           18
-        OBS             34
-        VORSystem       43
+        Main            45 //in TA3 we plan to implement UI loop instead of hard-codes, for fewer LOC
+        radio           67
+        VORSystem       112
         
 total effort to-date
-    William Mullen: ??? hours
-    Lambert Leong:  7 hours
+    William Mullen: 7.5 hours
+    Lambert Leong:  7.75 hours
