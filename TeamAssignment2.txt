@@ -1,0 +1,20 @@
+Actual LOC to-date: 
+    Objects/Classes     LOC //(counting comments)
+        Main            60
+        radio           67 
+        VORSystem       112
+
+Estimated LOC at completion:    
+    Objects/Classes     LOC
+        Main            45 //in TA3 we plan to implement UI loop instead of hard-codes, for fewer LOC
+        radio           67
+        VORSystem       112
+        
+total effort to-date
+    William Mullen: 7.5 hours
+    Lambert Leong:  7.75 hours
+    
+    
+    Our source code can be found in the root directory of https://github.com/TeamFisher-ICS414/VOR/
+    specific files:
+    
