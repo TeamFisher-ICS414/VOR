@@ -15,13 +15,13 @@ public class radio {
 	public int produceSignal() {
 		if (validInput == false) {
 			signalValue = ((-1)*currentRadial);
-			if (currentRadial == 0) {
-				signalValue -= 360; 
-			}
 		} else {
-			signalValue = currentRadial;
+			if (currentRadial == 360) {
+				signalValue = 0; 
+			}else{
+				signalValue = currentRadial;	
+			}
 		}
-		
 		return signalValue;
 	}
 	/* Bill edit: I'm removing this function and creating a constructor. Driver/GUI will handle I/O
