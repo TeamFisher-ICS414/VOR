@@ -84,15 +84,22 @@ public class VORSystem {
 	}
 	
 	public void dotCalc(){
-		if(Math.abs(deflection)>=10) {
+		private int dotHelper;
+		if(Math.abs(deflection)<=90) {
+			dotHelper = Math.abs(deflection);
+		}else{
+			dotHelper = 180 - Math.abs(deflection);
+		}
+		
+		if(dotHelper>=10) {
 			dots = "FULL";
-		}else if (Math.abs(deflection)>=8) {
+		}else if (dotHelper>=8) {
 			dots = "4 dots";
-		}else if (Math.abs(deflection)>=6) {
+		}else if (dotHelper>=6) {
 			dots = "3 dots";
-		}else if (Math.abs(deflection)>=4) {
+		}else if (dotHelper>=4) {
 			dots = "2 dots";
-		}else if (Math.abs(deflection)>=2) {
+		}else if (dotHelper>=2) {
 			dots = "1 dot";
 		}else {
 			dots = "0 dots";
