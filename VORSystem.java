@@ -63,13 +63,13 @@ public class VORSystem {
 	}
 	
 	public void direction(){
-		if(deflection < 0){
-			turn = "LEFT";
-		}else if (deflection == 0){
+		if (deflection == 0){
 			turn = "CENTERED";
 		}else if (Math.abs(deflection) == 180){
 			turn = "CENTERED";
 			toward=true;
+		}else if(deflection < 0){
+			turn = "LEFT";
 		}else {
 			turn = "RIGHT";
 		}
@@ -84,7 +84,7 @@ public class VORSystem {
 	}
 	
 	public void dotCalc(){
-		private int dotHelper;
+		int dotHelper;
 		if(Math.abs(deflection)<=90) {
 			dotHelper = Math.abs(deflection);
 		}else{
