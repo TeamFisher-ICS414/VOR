@@ -19,7 +19,7 @@ public class Main {
 		System.out.println("VOR object output:");
 		testSystem1.output();
 		System.out.println("");
-		
+		/*	Reduced to 1 set of inputs so that VOR object runs, test cases are handled in test classes
 		radial = 80;
 		radio radio2 = new radio(radial, good);
 		signalInput = radio2.produceSignal();
@@ -56,6 +56,7 @@ public class Main {
 		System.out.println("VOR object output:");
 		testSystem5.output();
 		System.out.println("");
+		*/
 	}
 }
 
