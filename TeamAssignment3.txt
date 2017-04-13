@@ -1,0 +1,28 @@
+Actual LOC to-date: 
+    Objects/Classes             LOC //(counting comments)
+        Main                    60
+        radio                   67 
+        VORSystem               112
+        driverTest              185
+        VORQuadrantsSystemTest  37
+
+Estimated LOC at completion:    
+    Objects/Classes             LOC
+        Main                    45 //in TA3 we plan to implement UI loop instead of hard-codes, for fewer LOC
+        radio                   67
+        VORSystem               112
+        driverTest              185
+        VORQuadrantsSystemTest  37
+        
+total effort to-date
+    Lambert Leong:  10 hours
+    William Mullen:  hours
+    
+Testing utilized the JUnit library and tests.  We categorized testing into two parts, unit testing, which tests each function and its components and system testing, which evaluates the correctness of the program as a whole.  
+
+Unit testing involved the decomposition of the functions within each class.  All class functions and variables visibility was changed to public so that the JUnit test class can access them.  The radio class was the first class to be evaluated.  It is necessary that our radio class functions properly because its output is being passed to our VOR system.  The VOR system class was the next class to be evaluated.  The tests were organized by function and each conditional, if/else clause, was tested including corner cases.  All test check out and the logic within each function appears to be correct.
+
+Another test class was created to evaluate the system as a whole.  It looked at specific output of our VOR given a specific input.  Different situations were created in which different variables were passed to the radio and VOR.  In particular, there are four situations we were concerned with which involved the plane being in all four quadrants given the same destination.  The output is evaluated for correctness and a correct answer assumes program correctness.
+
+code can be found at the link below:
+https://github.com/TeamFisher-ICS414/VOR
