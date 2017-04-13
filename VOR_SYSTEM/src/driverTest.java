@@ -133,13 +133,56 @@ public class driverTest {
 		assertEquals("TO", vorTest.direction);
 
 		//180 toward
-
+		vorTest = new VORSystem(180, minRadio.produceSignal());
+		vorTest.deflectionCalc();
+		vorTest.direction();
+		vorTest.toFrom();
+		assertEquals("TO", vorTest.direction);		
+		
 		//from
 		vorTest = new VORSystem(30, goodRadio.produceSignal());
 		vorTest.deflectionCalc();
 		vorTest.direction();
 		vorTest.toFrom();
 		assertEquals("FROM", vorTest.direction);
+		
+//dotCalc
+		//
+		vorTest = new VORSystem(45, minRadio.produceSignal());
+		vorTest.deflection = 45;
+		vorTest.dotCalc();
+		assertEquals("FULL", vorTest.dots);
+		
+		vorTest.deflection = 8;
+		vorTest.dotCalc();
+		assertEquals("4 dots",vorTest.dots);
+		
+		vorTest.deflection = 6;
+		vorTest.dotCalc();
+		assertEquals("3 dots",vorTest.dots);
+		
+		vorTest.deflection = 4;
+		vorTest.dotCalc();
+		assertEquals("2 dots",vorTest.dots);
+		
+		vorTest.deflection = 2;
+		vorTest.dotCalc();
+		assertEquals("1 dot",vorTest.dots);
+		
+		vorTest.deflection = 0;
+		vorTest.dotCalc();
+		assertEquals("0 dots",vorTest.dots);
+		
+//output
+		//good signal
+		vorTest = new VORSystem(45, minRadio.produceSignal());
+		vorTest.output();
+		assertEquals(true, vorTest.goodSignal);
+		
+		//bad signal
+		vorTest = new VORSystem(90, minRadio.produceSignal());
+		vorTest.output();
+		assertEquals(false, vorTest.goodSignal);
 	}
 
 }
